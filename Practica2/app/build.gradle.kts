@@ -1,6 +1,5 @@
 plugins {
     alias(libs.plugins.android.application)
-    alias(libs.plugins.kotlin.android)
 }
 
 android {
@@ -11,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.practica2"
-        minSdk = 26
+        minSdk = 24
         targetSdk = 36
         versionCode = 1
         versionName = "1.0"
@@ -32,12 +31,14 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
-    kotlinOptions {
-        jvmTarget = "11"
+    viewBinding{
+        enable = true
     }
 }
 
 dependencies {
+    implementation("com.android.volley:volley:1.2.1")
+    implementation("com.github.bumptech.glide:glide:4.16.0")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
