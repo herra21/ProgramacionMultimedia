@@ -18,7 +18,6 @@ import com.google.android.material.snackbar.Snackbar
 import android.view.Menu
 import android.view.MenuItem
 import android.content.Intent
-import java.net.URLEncoder
 
 class MainActivity : AppCompatActivity() {
 
